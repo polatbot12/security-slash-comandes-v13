@@ -63,7 +63,7 @@ app.post("/dblwebhook", webhook.listener(vote => {
 })) 
 
 
-/*
+
 	{
     "472420453823021059_COINS": 2769,
     "552472908363202560_COINS": 2909,
@@ -100,8 +100,8 @@ app.post("/dblwebhook", webhook.listener(vote => {
     "724254095988490282_COINS": 2308,
     "681197962805772380_COINS": 1277
 		}
-		*/
-/*
+		
+
 const prefix = '+' 
 const translaater = require('@iamtraction/google-translate');
 client.on('messageCreate', async message => {
@@ -124,7 +124,7 @@ try {
         }
 })
 
-*/
+
 
 client.on("messageCreate", message => {
   if (message.content == "+test-help-2") {
