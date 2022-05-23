@@ -3,7 +3,7 @@ require("discord-reply")
 const Database = require("st.db");
 const db1 = new Database("./Database/database.json")
 const Discord = require("discord.js");
-const owners = '922224088590737520' 
+const owners = '669072128922091541' 
 module.exports = {
 	name: "control-user",
 	execute(message, client) {
