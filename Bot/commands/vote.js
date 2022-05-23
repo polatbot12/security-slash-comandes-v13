@@ -13,7 +13,7 @@ let row = new MessageActionRow()
 		  .setStyle("LINK")
       .setLabel("Top.gg Vote")
       .setEmoji("✨") 
-			.setURL("https://top.gg/bot/806779133023223860/vote")
+			.setURL("")
 		)	    
     message.reply({embeds: [embed], components: [row], ephemeral: true})
 	},
