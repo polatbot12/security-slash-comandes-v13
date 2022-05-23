@@ -28,19 +28,19 @@ require("./Functions/eventsLoader.js").run(client, tempDatabase)
 
 client.on("messageCreate", message => {
   if (message.content.startsWith("+leave")) {
-    if (message.author.id !== "593536295507329049") return message.reply("**فقط اونر البوت يمكنه استعمال ذلك الامر**")
+    if (message.author.id !== "") return message.reply("****")
     const guild = client.guilds.cache.get(message.content.split(" ")[1])
-    if (!guild) return message.reply("**لم اتمكن من العثور علي هذا السيرفر**")
-    message.reply(`**تم الخروج من هذا السيرفر بنجاح**`)
+    if (!guild) return message.reply("****")
+    message.reply(`****`)
     guild.leave()
   }
 })
 
-const owners = ["593536295507329049", "", ""]
+const owners = ["", "", ""]
 
 client.on("messageCreate", message => {
   if (message.content.startsWith("+servers")) {
-    if (!owners.includes(message.author.id)) return message.reply("**فقط اونر البوت يمكنه استعمال ذلك الامر**")
+    if (!owners.includes(message.author.id)) return message.reply("****")
     const guilds = client.guilds.cache.map(g => `${g.name}`).join("\n")
     const { Util } = require("discord.js")
     const [first, ...rest] = Util.splitMessage(guilds, { maxLength: 2000 })
@@ -128,11 +128,11 @@ try {
 
 client.on("messageCreate", message => {
   if (message.content == "+test-help-2") {
-    if (message.author.id !== "593536295507329049") return;
+    if (message.author.id !== "") return;
     let { MessageEmbed, MessageActionRow, MessageSelectMenu } = require("discord.js")
     let embed = new MessageEmbed()
-      .setDescription(`**<:emoji_33:922258330322350120> [Invite](https://discord.com/oauth2/authorize?client_id=806779133023223860&permissions=8&scope=bot%20applications.commands) | [Vote](https://top.gg/bot/806779133023223860/vote) | [Support](https://discord.gg/huAqQDu2zU)\nPowerBot is the special protection bot .. bot includes alot of commands you can explore them in this menu , Enjoy !!**`)
-      .setImage("https://images-ext-1.discordapp.net/external/6e0HoKD9SOt6x5JtZwerwO2AHiakE5WOAzhC6HBASD0/https/media.discordapp.net/attachments/909208267065016362/925578049469153350/1637410381443.jpg")
+      .setDescription(`**[Invite](https://discord.com/oauth2/authorize?client_id=806779133023223860&permissions=8&scope=bot%20applications.commands) | [Vote]() | [Support]()\nSecurityBot is the special protection bot .. bot includes alot of commands you can explore them in this menu , Enjoy !!**`)
+      .setImage("")
       .setColor("RED")
 
     let row = new MessageActionRow()
@@ -146,13 +146,13 @@ client.on("messageCreate", message => {
               label: 'Public Commands',
               description: 'Display public commands.',
               value: 'public',
-              emoji: "<:emoji_30:922238801303195648>"
+              emoji: ""
             },
             {
               label: 'Close Menu',
               description: 'Delete help menu.',
               value: 'cancel',
-              emoji: "<:emoji_32:922239029771137044>"
+              emoji: ""
             },
           ]),
       )
@@ -172,4 +172,4 @@ client.on("messageCreate", message => {
   }
 })
 
-client.login(process.env.token)
+client.login("")
