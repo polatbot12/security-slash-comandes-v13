@@ -8,4 +8,4 @@
 # Ba Hiway Swd Har keshayak haya la code yaxwd bot Join servarman bka xzmatt akain 
 
 
-# Link Server : https://discord.gg/ttx9b2YcaP
+# Link Server : https://discord.gg/jTQMBCvF5z
